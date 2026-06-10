@@ -11,12 +11,12 @@ export class BasePage {
         await this.page.goto(url);
     }
 
-    async basePageClickElement(element: Locator) {
-        await element.click();
+    async basePageClickElement(locator: Locator) {
+        await locator.click();
     }
 
-    async basePageEnterText(element: Locator, text: string) {
-        await element.fill(text);
+    async basePageEnterText(locator: Locator, text: string) {
+        await locator.fill(text);
     }
     
     async basePageVerifyElementIsVisible(locator: Locator) {
