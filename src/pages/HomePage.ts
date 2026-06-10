@@ -1,4 +1,4 @@
-import {Page, Locator} from '@playwright/test';
+import { Locator} from '@playwright/test';
 import { BasePage } from './BasePage';
 
 export class HomePage extends BasePage {
@@ -13,7 +13,13 @@ export class HomePage extends BasePage {
 
     async navigateToInstructorPage() {
         await this.basePageClickElement(this.page.locator('xpath=//button//span[text() = "Menu"]'));
-        await this.basePageClickElement(this.page.locator('xpath=//a[contains(.,"Instructor Panel")]'));   
+        await this.basePageClickElement(this.page.locator('xpath=//span[contains(.,"Instructor Panel")]').first());   
+
+    }
+
+      async navigateToUserProfilePage() {
+        await this.basePageClickElement(this.page.locator('xpath=//button//span[text() = "Menu"]'));
+        await this.basePageClickElement(this.page.locator('xpath=//span[contains(.,"My Profile")]').first());   
 
     }
 

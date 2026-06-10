@@ -16,12 +16,19 @@ export class BasePage {
     }
 
     async basePageEnterText(locator: Locator, text: string) {
+        await locator.clear();
         await locator.fill(text);
+    }
+
+    async basePageGetTextValue(locator: Locator): Promise<string> {
+        return await locator.inputValue();
     }
     
     async basePageVerifyElementIsVisible(locator: Locator) {
         await expect(locator).toBeVisible();
     }
+
+
 
 
 }

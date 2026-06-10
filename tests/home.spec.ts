@@ -11,9 +11,15 @@ test.describe('Instructor panel functionality', () => {
         await homePage.navigateToInstructorPage();
     });
 
-    //  test('Test2', async ({ loginPage, homePage }) => {
-    //     //comment
-    // });
+     test.only('Update user profile', async ({ loginPage, homePage, userProfilePage }) => {
+        await loginPage.basePageGoToUrl('/');
+        await loginPage.navigateToLoginPage();
+        await loginPage.userLogin(validUsers.admin.username, validUsers.admin.password);
+        await homePage.verifyHomePageIsDisplayed();
+        await homePage.navigateToUserProfilePage();
+        await userProfilePage.editUserProfile(validUsers.admin.gitUsername);
+        await userProfilePage.verifyProfile(validUsers.admin.gitUsername);
+    });
 
 
 });
