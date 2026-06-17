@@ -4,7 +4,7 @@ import { BasePage } from './BasePage';
 export class HomePage extends BasePage {
 
     get verifyHomePageHeading(): Locator {
-        return this.page.getByRole('heading', { name: /Welcome\s*back/i }); //regex  for case insensitive match and to ignore any whitespace between "Welcome" and "back"
+        return this.page.getByRole('heading', { name: /Welcome\s*back123/i }); //regex  for case insensitive match and to ignore any whitespace between "Welcome" and "back"
     }
 
     async verifyHomePageIsDisplayed() {

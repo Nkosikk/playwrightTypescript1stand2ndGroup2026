@@ -14,7 +14,7 @@ test.describe('Instructor panel functionality', () => {
         await homePage.navigateToInstructorPage();
     });
 
-     test.only('Update user profile', async ({ loginPage, homePage, userProfilePage }) => {
+     test('Update user profile', async ({ loginPage, homePage, userProfilePage }) => {
         // await loginPage.basePageGoToUrl('/');
         // await loginPage.navigateToLoginPage();
         // await loginPage.userLogin(validUsers.admin.username, validUsers.admin.password);
