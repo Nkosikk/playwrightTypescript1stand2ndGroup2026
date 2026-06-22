@@ -15,7 +15,7 @@ test.describe ('Login functionality', () => {
     await homePage.verifyHomePageIsDisplayed();
 });
 
-    test.only('Positive login via API - class user', async ({request}) => {
+    test('Positive login via API - class user', {tag: '@regression'}, async ({request}) => {
         const response = await request.post('https://www.ndosiautomation.co.za/APIDEV/login', {
         //payload
         data: {

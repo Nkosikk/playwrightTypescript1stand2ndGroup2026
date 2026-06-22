@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:report": "npx playwright test && npx playwright-showreport",
+    "test:regression": "npx playwright test --grep @regression"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Nkosikk/playwrightTypescript1stand2ndGroup2026.git"
