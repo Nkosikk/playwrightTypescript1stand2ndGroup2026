@@ -1,3 +1,2 @@
 Test No;Description;Username;Password;Gitusername;Expected output;;
-Test001;UpdateGitUsername;playtest@gmail.com;1234567!;GitTest123;;;
-Test002;UpdateAdminGitusername;admin@gmail.com;@12345678;AdminGittest;;;
+Test001;UpdateGitUsername;sintutu@dev.com;@987654321;gitUsername;;;

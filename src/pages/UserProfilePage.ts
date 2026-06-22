@@ -17,7 +17,7 @@ export class UserProfilePage extends BasePage {
     async verifyProfile(gitUsername: string){
         //Homework - please rework the locator
         // const actualGitUsername = await this.basePageGetTextValue(this.page.locator('xpath = //*[@id="app-main-content"]/section/div/div[1]/div[5]/div[2]/div/a')); // Old locator from homework
-        const actualGitUsername = await this.basePageGetTextValue(this.page.getByRole('link', { name: `🐙 {gitUsername}` })); // Using the npx playwright codegen locator
+        const actualGitUsername = await this.basePageGetTextValue(this.page.getByRole('link', { name: `🐙 ${gitUsername}` })); // Using the npx playwright codegen locator
         // const actualGitUsername = await this.basePageGetTextValue(this.page.
         console.log(`Actual GitUsername: $(actualGitUsername)`);
         if(actualGitUsername !== gitUsername){
@@ -32,3 +32,4 @@ export class UserProfilePage extends BasePage {
 //   at UserProfilePage.basePageGetTextValue (C:\Users\DELL\dev\playwrightTypescript1stand2ndGroup2026\src\pages\BasePage.ts:24:30)
 //     at UserProfilePage.verifyProfile (C:\Users\DELL\dev\playwrightTypescript1stand2ndGroup2026\src\pages\UserProfilePage.ts:17:46)
 //     at C:\Users\DELL\dev\playwrightTypescript1stand2ndGroup2026\tests\home.spec.ts:25:31
+
