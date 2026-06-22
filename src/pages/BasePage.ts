@@ -1,7 +1,7 @@
-import { Page, Locator, expect} from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 
 export class BasePage {
-    
+
     constructor(public page: Page) {
         this.page = page;
     }
@@ -23,12 +23,12 @@ export class BasePage {
     async basePageGetTextValue(locator: Locator): Promise<string> {
         return await locator.inputValue();
     }
-    
+
     async basePageVerifyElementIsVisible(locator: Locator) {
         await expect(locator).toBeVisible();
     }
 
-
-
-
+    async basePageGetTextContent(locator: Locator) {
+        return await locator.textContent();
+    }
 }

@@ -20,3 +20,11 @@ export const invalidUsers = {
         password: '@12345678'
     }
 };
+
+export const sintuUsers = {
+    charlie: {
+        username: 'charlie@delta.echo',
+        password: '!1234567',
+        gitUsername: 'golf'
+    },
+};
